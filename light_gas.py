@@ -11,11 +11,9 @@ GPIO.setup(LED, GPIO.OUT)
 
     
 while True:
-    #readPotentiometer()
     lightvalue = mcp.readAnalog(0,0)
     gasValue = mcp.readAnalog(0,1)
     print "LightValue = ", lightvalue, "CO Gas Value= ", gasValue
-    #print "CO Gas Value = ", gasValue
     time.sleep( 0.2)
     if (lightvalue <=700):
         GPIO.output(LED, GPIO.HIGH)
